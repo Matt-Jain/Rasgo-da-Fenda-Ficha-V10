@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Rasgo da Fenda — Aegis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN FAKE -->
+<section id="loginScreen" class="screen active">
+  <div class="login-box">
+    <h1>Rasgo da Fenda</h1>
+    <p>Aegis — O Despertar</p>
+    <input id="playerNameLogin" placeholder="Seu nome">
+    <button onclick="enterApp()">Entrar</button>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menuScreen" class="screen">
+  <h2>Menu</h2>
+  <div class="menu">
+    <button onclick="openScreen('createScreen')">Criar Personagem</button>
+    <button onclick="openScreen('charactersScreen')">Personagens</button>
+    <button onclick="openScreen('npcScreen')">NPCs</button>
+    <button onclick="openScreen('diceScreen')">Dados</button>
+  </div>
+</section>
+
+<!-- CRIAÇÃO -->
+<section id="createScreen" class="screen">
+  <h2>Criar Personagem</h2>
+
+  <input id="charName" placeholder="Nome do personagem">
+  <input id="playerName" placeholder="Nome do jogador">
+  <select id="race">
+    <option>Humano</option>
+    <option>Marcado</option>
+    <option>Condenado</option>
+    <option>Vínculo da Fenda</option>
+  </select>
+
+  <textarea id="appearance" placeholder="Aparência"></textarea>
+  <textarea id="history" placeholder="História"></textarea>
+
+  <button onclick="goToSkills()">Prosseguir</button>
+</section>
+
+<!-- PERÍCIAS -->
+<section id="skillsScreen" class="screen">
+  <h2>Perícias (200 pontos)</h2>
+  <div id="skillsList"></div>
+  <p id="pointsLeft"></p>
+  <button onclick="finishCharacter()">Finalizar</button>
+</section>
+
+<!-- PERSONAGENS -->
+<section id="charactersScreen" class="screen">
+  <h2>Personagens</h2>
+  <div id="charactersList"></div>
+  <button onclick="openScreen('menuScreen')">Voltar</button>
+</section>
+
+<!-- NPC -->
+<section id="npcScreen" class="screen">
+  <h2>NPCs</h2>
+  <p>(em desenvolvimento visual — estrutura pronta)</p>
+  <button onclick="openScreen('menuScreen')">Voltar</button>
+</section>
+
+<!-- DADOS -->
+<section id="diceScreen" class="screen">
+  <h2>Teste de Perícia (d100)</h2>
+  <select id="diceSkill"></select>
+  <button onclick="rollDice()">Rolar</button>
+  <div id="diceAnimation">🎲</div>
+  <div id="diceResult"></div>
+  <button onclick="openScreen('menuScreen')">Voltar</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
