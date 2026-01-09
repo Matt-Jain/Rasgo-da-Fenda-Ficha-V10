@@ -1,0 +1,77 @@
+*{box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{
+ margin:0;
+ background:radial-gradient(circle,#0b2b1a,#020403);
+ color:#e0f2f1;
+}
+.screen{
+ display:none;
+ min-height:100vh;
+ padding:30px;
+ text-align:center;
+}
+.screen.active{display:block}
+
+.login-box{
+ background:#0f1f17;
+ padding:30px;
+ border-radius:16px;
+ max-width:320px;
+ margin:auto;
+ box-shadow:0 0 30px #000;
+}
+
+input,textarea,select{
+ width:100%;
+ margin:6px 0;
+ padding:8px;
+ border-radius:8px;
+ border:none;
+}
+
+button{
+ background:linear-gradient(135deg,#1b5e20,#43a047);
+ color:#fff;
+ padding:10px 16px;
+ border:none;
+ border-radius:10px;
+ margin-top:10px;
+ cursor:pointer;
+}
+
+.menu button{
+ display:block;
+ margin:12px auto;
+ width:240px;
+}
+
+.skill{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ background:#12271d;
+ padding:8px;
+ margin:4px 0;
+ border-radius:8px;
+}
+
+.skill button{
+ padding:4px 8px;
+}
+
+#diceAnimation{
+ font-size:50px;
+ margin:20px;
+ animation:spin .8s linear infinite;
+ display:none;
+}
+
+@keyframes spin{
+ 0%{transform:rotate(0)}
+ 100%{transform:rotate(360deg)}
+}
+
+#diceResult{
+ font-size:22px;
+ margin-top:10px;
+}
